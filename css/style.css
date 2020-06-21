@@ -59,6 +59,24 @@ img {
   margin: 8px auto;
 }
 
+.subtitulo-interno {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 20px;
+}
+
+.subtitulo-interno::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: black;
+  margin-top: 8px;
+}
+
 /* Header */
 .header {
   background-color: var(--abobora-color);
@@ -70,11 +88,11 @@ img {
   z-index: 10;
 }
 
-.header-menu{
+.header-menu {
   text-align: right;
 }
 
-.header-menu ul li{
+.header-menu ul li {
   display: inline-block;
   margin-left: 20px;
   margin-top: 20px;
@@ -82,7 +100,7 @@ img {
 
 .header-menu ul li a {
   color: #000;
-  font-size: 14px;  
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -92,6 +110,11 @@ img {
 .header-menu ul li a:hover {
   color: #FFF;
 }
+
+.header-menu ul li a.menu-ativo {
+  color: white;
+}
+
 /* Introduçao */
 .introducao {
   margin-top: 92px;
@@ -118,11 +141,13 @@ img {
   margin: 0 auto;
   margin-bottom: 40px;
 }
+
 .quote-externo p {
   font-style: italic;
 }
 
-.quote-externo p::before, .quote-externo p::after  {
+.quote-externo p::before,
+.quote-externo p::after {
   content: "";
   display: block;
   width: 60px;
@@ -139,13 +164,40 @@ img {
   letter-spacing: .1em;
 }
 
+/* Introduçao Interna */
+
+.introducao-interna {
+  width: 100%;
+  height: 160px;
+  margin-top: 92px;
+  padding-top: 40px;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.introducao-interna h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.introducao-interna h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: white;
+  margin: 6px auto 10px auto;
+}
+
 /* Produtos */
 
 .produtos {
   padding: 60px 0;
 }
 
-.produtos-lista li{
+.produtos-lista li {
   background: var(--abobora-color);
   text-align: center;
 }
@@ -233,13 +285,16 @@ img {
   margin: 0 auto;
 }
 
-.qualidade li {
-  text-align: center;
-  padding: 0 40px;
+
+.qualidade-lista {
+  padding-top: 20px;
+  overflow: auto;
+  /* CLEAR FIX - limpar os elementos */
 }
 
-.qualidade-lista{
-  padding-top: 20px;
+.qualidade-lista li {
+  text-align: center;
+  padding: 0 40px;
 }
 
 .qualidade-lista li h3 {
@@ -292,8 +347,9 @@ img {
   line-height: 25px;
   letter-spacing: .1em;
   margin: 10px auto 20px auto;
-  
+
 }
+
 .footer h3::after {
   content: "";
   display: block;
@@ -307,7 +363,7 @@ img {
   padding-right: 40px;
 }
 
-.footer-contato ul li{
+.footer-contato ul li {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
   line-height: 20px;
@@ -318,7 +374,7 @@ img {
   margin-right: 10px;
 }
 
-.footer-redes ul li a{
+.footer-redes ul li a {
   display: block;
   border: 3px solid var(--abobora-color);
   padding: 10px;
@@ -333,6 +389,5 @@ img {
   /* height: 60px; */
   padding: 20px 0;
   background: var(--abobora-color);
-  
-}
 
+}
